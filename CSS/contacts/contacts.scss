@@ -1,0 +1,153 @@
+body {
+  background-image: url(../../Photo_contacts/tropical-forest_4000x2666_hdd3p.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed,fixed;
+  main {
+    display: flex;
+    flex-direction: row;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-top: 2vw;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10vw;
+    .inf {
+      display: flex;
+      flex-direction: column;
+      .agency {
+        animation-name: slide;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        transition: 0.5s ease-out;
+        background-color: rgba(217, 217, 217, 0.7);
+        h2 {
+          font-weight: 300;
+          margin: 0;
+        }
+        height: 30%;
+        padding: 1.5vw;
+      }
+      .agency:hover {
+        transition: 0.5s ease-out;
+        border-radius: 1.5vw;
+        background-color: rgba(217, 217, 217, 1);
+      }
+      .people {
+        div {
+          background-color: rgba(217, 217, 217, 0.7);
+          animation-name: slide;
+          animation-duration: 1s;
+          animation-timing-function: ease-in;
+          animation-fill-mode: forwards;
+          padding-left: 5vw;
+          padding-right: 5vw;
+          height: 50%;
+          transition: 0.5s ease-out;
+          h2 {
+            text-align: center;
+            font-size: 1.5vw;
+            margin-bottom: 0;
+            font-weight: 300;
+          }
+          .spes {
+            display: block;
+            text-align: center;
+            margin-bottom: 0;
+          }
+          img {
+            width: 50px;
+            left: 5%;
+          }
+          p {
+            display: inline-block;
+            text-align: left;
+            font-weight: 200;
+          }
+        }
+        div:hover {
+          transition: 0.5s ease-out;
+          border-radius: 1.5vw;
+          background-color: rgba(217, 217, 217, 1);
+        }
+      }
+    }
+    form {
+      margin-left: 25vw;
+      margin-top: 5vw;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(217, 217, 217, 1);
+      padding: 2vw;
+      height: 50%;
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      width: 20vw;
+      h2{
+        font-weight: 200;
+        text-align: center;
+      }
+      input {
+        margin-top: 3vw;
+        background-color: #fff;
+        border-radius: 50rem;
+        border: 1px solid #fff;
+        padding: 0.5rem 1rem;
+      }
+      textarea {
+        margin-top: 3vw;
+        background-color: #fff;
+        border-radius: 50rem;
+        border: 1px solid #fff;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 960px) {
+  body {
+    background-size: 100% 100%;
+    main.active {
+      margin-top: 50vw;
+    }
+    main {
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+      .inf{
+      .agency {
+        position: relative;
+        width: 95%;
+        margin-top: 2vw;
+      }
+      .people {
+        width: 100%;
+        margin-left: 0;
+        div {
+          h2 {
+            font-size: 5vw;
+          }
+          img {
+            width: 15%;
+          }
+        }
+      }
+    }
+      form{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}

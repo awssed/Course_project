@@ -1,0 +1,196 @@
+body {
+  background-image: url(../../Photo/Back.png);
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-size: 100% 100%;
+}
+body main #p1 {
+  display: flex;
+  align-self: centers;
+  vertical-align: middle;
+  font-family: "EB+Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 5vw;
+  line-height: 59px;
+  color: #fefefe;
+  justify-content: center;
+  align-items: center;
+}
+body main #p2 {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  line-height: 5vw;
+  color: #fefefe;
+  justify-content: center;
+  align-items: center;
+}
+body main #start_tr {
+  display: flex;
+  width: 22vw;
+  height: 5vw;
+  font-size: 1.5vw;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(217, 217, 217, 0.8);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+body main #start_tr a {
+  white-space: nowrap;
+  color: black;
+  text-decoration: none;
+  vertical-align: middle;
+  font-family: "Roboto", sans-serif;
+  line-height: 5vw;
+  margin-left: 1vw;
+}
+body main #start_tr a #arr {
+  width: 2vw;
+  margin-left: 1vw;
+  position: relative;
+  top: 0.2vw;
+}
+body main #start_tr a #bag {
+  margin-left: 0.5vw;
+  width: 2vw;
+  position: relative;
+  top: 0.8vw;
+}
+body h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: white;
+  position: relative;
+  margin: 20vw;
+  margin-bottom: 10vw;
+  font-size: 2.5vw;
+  text-align: center;
+  box-sizing: content-box;
+}
+body article {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 4vw;
+}
+body article div {
+  display: flex;
+  margin-left: 9vw;
+  margin-top: 2vw;
+  flex-direction: column;
+  box-sizing: content-box;
+  width: 30vw;
+}
+body article div img {
+  display: block;
+  height: 20vw;
+  z-index: 1;
+}
+body article div div {
+  background: #d9d9d9;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 0;
+  margin-top: 0;
+}
+body article div div p {
+  margin: 0;
+  margin-left: 0.2vw;
+  margin-right: 0.2vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 2.5vw;
+  color: black;
+}
+body article div div .cost_ar {
+  align-self: end;
+}
+body article div div .cost_ar .person_ar {
+  font-size: 1.5vw;
+}
+body article div div .inf_ar {
+  font-weight: 100;
+  font-size: 1.5vw;
+  text-align: left;
+}
+body article .dics_ar {
+  transition: 0.5s ease-out;
+  translate: 0 -13vw;
+}
+body article .art:hover .dics_ar {
+  translate: 0 0;
+  transition: 0.5s ease-out;
+  translate: 0 0;
+}
+
+@font-face {
+  font-family: "Bookman";
+  src: url(/Fonts/bookmanoldstyle.ttf);
+}
+@media screen and (max-width: 960px) {
+  body main.active {
+    position: relative;
+    margin-top: 50vw;
+  }
+  body main.active #p1 {
+    display: none;
+  }
+  body main #p1 {
+    font-size: 10vw;
+  }
+  body main #p2 {
+    text-align: center;
+    font-size: 5vw;
+  }
+  body main #start_tr {
+    width: 62vw;
+    height: 12vw;
+  }
+  body main #start_tr a {
+    padding-top: 2.5vw;
+    font-size: 5vw;
+  }
+  body main #start_tr a #arr {
+    width: 3.8vw;
+  }
+  body main #start_tr a #bag {
+    width: 3.8vw;
+  }
+  body h2 {
+    margin: 0;
+    margin-top: 55vw;
+    font-size: 4vw;
+  }
+  body article {
+    flex-direction: column;
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body article div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+  }
+  body article div .dics_ar {
+    translate: 0 0vw;
+  }
+  body article div div .name_ar {
+    font-size: 4vw;
+  }
+  body article div div .cost_ar {
+    font-size: 4vw;
+  }
+  body article div div .cost_ar .person_ar {
+    font-size: 3vw;
+  }
+  body article div div .inf_ar {
+    font-size: 3vw;
+  }
+}/*# sourceMappingURL=index.css.map */

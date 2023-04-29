@@ -1,0 +1,230 @@
+body {
+  background-image: url(../../Photo_about_us/tropical-forest_4000x2666_hdd3p.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed, fixed;
+}
+body header {
+  display: flex;
+  max-width: 1980px;
+  flex-direction: row;
+  flex-shrink: 1;
+  width: 100%;
+  height: 10%;
+}
+body header #logo {
+  display: inline-block;
+  position: relative;
+  left: 5%;
+  top: -2vw;
+  width: 10vw;
+  height: 10vw;
+}
+body header #soc {
+  align-items: start;
+  display: flex;
+}
+body header #soc img {
+  margin-right: 10%;
+}
+body header ul {
+  width: 100%;
+  margin: 0;
+  box-sizing: content-box;
+  display: flex;
+  padding: 0;
+  margin-left: 10vw;
+  flex-direction: row;
+}
+body header ul li {
+  box-sizing: content-box;
+  display: flex;
+  margin-right: 6.5%;
+  line-height: 50%;
+  font-size: 2vw;
+}
+body header ul li a {
+  white-space: nowrap;
+  color: #fefefe;
+  text-decoration: none;
+  -webkit-text-stroke: 0.5px black;
+  font-family: "Roboto";
+}
+body header #phone {
+  display: flex;
+  position: relative;
+  margin-right: 3%;
+  margin-left: auto;
+  align-items: start;
+  justify-content: flex-end;
+}
+body header #phone p {
+  margin: 0;
+  font-size: 1vw;
+  font-weight: 100;
+  display: inline-block;
+  font-family: "Roboto";
+  color: #fefefe;
+}
+body header #mail {
+  display: flex;
+  align-items: start;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+body header #mail p {
+  margin: 0;
+  font-size: 1vw;
+  font-weight: 100;
+  display: inline-block;
+  font-family: "Roboto";
+  color: #fefefe;
+}
+body main {
+  display: flex;
+  color: white;
+  flex-direction: row;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  justify-content: space-between;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-bottom: 5vw;
+  flex-wrap: wrap;
+}
+body main .break {
+  flex-basis: 100%;
+  height: 0;
+}
+body main div {
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+}
+body main div h2 {
+  font-weight: 300;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+body main div img {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  left: 44%;
+  width: 30px;
+  height: 2vw;
+  margin-bottom: 0;
+  transition: 0.5s ease-out;
+}
+body main div p {
+  margin: auto;
+  margin-top: 0;
+  width: 17vw;
+  font-weight: 200;
+  animation-name: slide;
+  animation-duration: 1s;
+}
+body main div:hover img {
+  translate: 0 -5vw;
+  transition: 0.5s ease-out;
+}
+body footer {
+  display: flex;
+  max-width: 1980px;
+  margin-top: 10vw;
+}
+body footer #soc {
+  align-items: start;
+  display: flex;
+  position: relative;
+}
+body footer #soc img {
+  margin-top: 80%;
+  margin-right: 10%;
+}
+body footer #logo {
+  display: inline-block;
+  position: relative;
+  width: 10vw;
+  margin-left: 40vw;
+  margin-right: 0;
+}
+body footer #phone {
+  display: flex;
+  margin-left: auto;
+  align-items: start;
+  justify-content: flex-end;
+  margin-top: 4vw;
+  margin-right: 2vw;
+}
+body footer #phone p {
+  margin: 0;
+  font-size: 1vw;
+  display: inline-block;
+  font-family: "Roboto";
+  color: #fefefe;
+  font-weight: 100;
+}
+body footer #mail {
+  display: flex;
+  align-items: start;
+  justify-content: flex-end;
+  margin-top: 4vw;
+  position: relative;
+}
+body footer #mail p {
+  margin: 0;
+  font-size: 1vw;
+  display: inline-block;
+  font-family: "Roboto";
+  color: #fefefe;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 960px) {
+  body main.active {
+    margin-top: 42vw;
+  }
+  body main {
+    flex-direction: column;
+    padding: 0;
+  }
+  body main div img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 43vw;
+  }
+  body main div p {
+    animation-name: slide_mobile;
+    animation-duration: 1.5s;
+    margin-right: 20vw;
+    margin: 0;
+    width: 95vw;
+    height: auto;
+  }
+}
+@keyframes slide_mobile {
+  from {
+    background-color: white;
+    filter: opacity(0.1);
+    background-size: cover;
+  }
+  to {
+    background-size: 0%;
+  }
+}
+@keyframes slide {
+  from {
+    background-color: white;
+    filter: opacity(0.1);
+    height: 100%;
+  }
+  to {
+    background-color: white;
+    filter: opacity(0.6);
+    height: 0%;
+  }
+}/*# sourceMappingURL=about_us.css.map */

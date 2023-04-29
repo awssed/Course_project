@@ -1,0 +1,147 @@
+body {
+  background-image: url(../../Photo_contacts/tropical-forest_4000x2666_hdd3p.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed, fixed;
+}
+body main {
+  display: flex;
+  flex-direction: row;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  margin-top: 2vw;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10vw;
+}
+body main .inf {
+  display: flex;
+  flex-direction: column;
+}
+body main .inf .agency {
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  transition: 0.5s ease-out;
+  background-color: rgba(217, 217, 217, 0.7);
+  height: 30%;
+  padding: 1.5vw;
+}
+body main .inf .agency h2 {
+  font-weight: 300;
+  margin: 0;
+}
+body main .inf .agency:hover {
+  transition: 0.5s ease-out;
+  border-radius: 1.5vw;
+  background-color: rgb(217, 217, 217);
+}
+body main .inf .people div {
+  background-color: rgba(217, 217, 217, 0.7);
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  height: 50%;
+  transition: 0.5s ease-out;
+}
+body main .inf .people div h2 {
+  text-align: center;
+  font-size: 1.5vw;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+body main .inf .people div .spes {
+  display: block;
+  text-align: center;
+  margin-bottom: 0;
+}
+body main .inf .people div img {
+  width: 50px;
+  left: 5%;
+}
+body main .inf .people div p {
+  display: inline-block;
+  text-align: left;
+  font-weight: 200;
+}
+body main .inf .people div:hover {
+  transition: 0.5s ease-out;
+  border-radius: 1.5vw;
+  background-color: rgb(217, 217, 217);
+}
+body main form {
+  margin-left: 25vw;
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(217, 217, 217);
+  padding: 2vw;
+  height: 50%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  width: 20vw;
+}
+body main form h2 {
+  font-weight: 200;
+  text-align: center;
+}
+body main form input {
+  margin-top: 3vw;
+  background-color: #fff;
+  border-radius: 50rem;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+}
+body main form textarea {
+  margin-top: 3vw;
+  background-color: #fff;
+  border-radius: 50rem;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    background-size: 100% 100%;
+  }
+  body main.active {
+    margin-top: 50vw;
+  }
+  body main {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  body main .inf .agency {
+    position: relative;
+    width: 95%;
+    margin-top: 2vw;
+  }
+  body main .inf .people {
+    width: 100%;
+    margin-left: 0;
+  }
+  body main .inf .people div h2 {
+    font-size: 5vw;
+  }
+  body main .inf .people div img {
+    width: 15%;
+  }
+  body main form {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@keyframes slide {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}/*# sourceMappingURL=contacts.css.map */

@@ -1,0 +1,173 @@
+body {
+  box-sizing: content-box;
+  background-image: url(../../Photo_tours/amazing-waterfall-2K-wallpaper\ 1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  form.active{
+    display: block;
+  }
+  form.close{
+    display: none;
+  }
+  form{
+    .off{
+      display: block;
+      background-image: url(../../Photo_tours/radix-icons_cross-1.svg);
+      position: relative;
+      background-size: 100%;
+        width: 50px;
+        height: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: auto;
+       margin-top: 0.5vw;
+       margin-right: 0.5vw;
+    }
+    #form_off{
+      display: none;
+    }
+    z-index: 1;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 30%;
+    background: #AEABAB;
+   text-align: center;
+   left: 35%;
+   input[type="text"]{
+    position: relative;
+    margin-top: 3vw;
+    background-color: #fff;
+    border-radius: 50rem;
+    border: 1px solid #fff;
+    padding: 0.5rem 1rem;
+    width: 60%;
+   }
+   input[type="submit"]{
+    position: relative;
+    width: 35%;
+    padding: 2%;
+    border-radius: 20px;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    background: #29A5FF;
+   }
+  }
+  main {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border-radius: 20px;
+    font-family: "Roboto",sans-serif;
+    overflow: scroll;
+    height: 600px;
+
+    div {
+      position: relative;
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 2vw;
+        display: grid;
+      background: #d9d9d9;
+      grid-template-areas: 
+      "main_photo inform open_form"
+      "main_photo desc open_form";
+      grid-template-columns: 30% 65% 5%;
+      grid-template-rows: 40% 60%;
+      margin-top: 1vw;
+     margin-bottom: 1vw;
+        img {
+            grid-area: main_photo;
+          position: relative;
+          width: 100%;
+          margin-top: 2vw;
+          margin-bottom: auto;
+        }
+        p {
+          span{
+            img {
+              position: relative;
+              width: 2vw;
+            }
+              span{
+                position: relative;
+                top: -70%;
+                font-size: 1.4vw;
+              }
+            height: 10px;
+            position: relative;
+            display: inline-block;
+          }
+        }
+        .inf{
+            grid-area: inform;
+            padding-left: 2%;
+            margin: 0;
+            height: 15vw;
+        }
+        .desc{
+            grid-area: desc;
+            padding-top: 0%;
+            padding-left: 2%;
+        }
+        .open_form{
+            grid:open_from;
+        }
+        input{
+          display: none;
+        }
+        label{
+         background-image: url(../../Photo_tours/material-symbols_arrow-forward-ios-sharp.svg);
+        background-size: 100%;
+        width: 30px;
+        height: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 100%;
+        }
+    }
+  }
+}
+@media screen and (max-width:960px) {
+  body{
+    form{
+      width: 70%;
+      height: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      left: 15%;
+    }
+    main{
+      overflow: scroll;
+        height: 100vw;
+        width: 85%;
+      div{
+        display: flex;
+        flex-direction: column;
+      .inf{
+        img{
+          width: 40px;
+        }
+        span{
+          font-size: 5vw;
+        }
+      }
+      .desc{
+        font-size:4vw;
+        box-sizing: content-box;
+      }
+      }
+    }
+    main.active{
+      margin-top: 50vw;
+    }
+  }
+}

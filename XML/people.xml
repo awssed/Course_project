@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="cars.css"?>
+<persons>
+<person>
+<name></name>
+<patronymic></patronymic>
+<surname></surname>
+<mob_number></mob_number>
+<mail></mail>
+</person>
+</persons>
