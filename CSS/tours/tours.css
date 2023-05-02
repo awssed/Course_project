@@ -1,8 +1,17 @@
+body main div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 body {
   box-sizing: content-box;
   background-image: url(../../Photo_tours/amazing-waterfall-2K-wallpaper\ 1.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 }
 body form.active {
   display: block;
@@ -16,7 +25,7 @@ body form {
   position: absolute;
   flex-direction: column;
   width: 30%;
-  background: #AEABAB;
+  background: #aeabab;
   text-align: center;
   left: 35%;
 }
@@ -52,7 +61,7 @@ body form input[type=submit] {
   border-radius: 20px;
   margin-top: 2vw;
   margin-bottom: 2vw;
-  background: #29A5FF;
+  background: #29a5ff;
 }
 body main {
   background: rgba(255, 255, 255, 0.8);
@@ -72,51 +81,50 @@ body main {
 body main div {
   position: relative;
   width: 80%;
-  margin-right: auto;
-  margin-left: auto;
   padding: 2vw;
-  display: grid;
   background: #d9d9d9;
-  grid-template-areas: "main_photo inform open_form" "main_photo desc open_form";
-  grid-template-columns: 30% 65% 5%;
-  grid-template-rows: 40% 60%;
   margin-top: 1vw;
   margin-bottom: 1vw;
+  display: flex;
+  flex-direction: row;
 }
 body main div img {
   grid-area: main_photo;
   position: relative;
-  width: 100%;
+  width: 40%;
   margin-top: 2vw;
   margin-bottom: auto;
 }
-body main div p span {
+body main div div {
+  display: flex;
+  flex-direction: column;
+}
+body main div div p span {
   height: 10px;
   position: relative;
   display: inline-block;
 }
-body main div p span img {
+body main div div p span img {
   position: relative;
   width: 2vw;
 }
-body main div p span span {
+body main div div p span span {
   position: relative;
   top: -70%;
   font-size: 1.4vw;
 }
-body main div .inf {
+body main div div .inf {
+  position: relative;
+  top: -10%;
   grid-area: inform;
   padding-left: 2%;
   margin: 0;
-  height: 15vw;
 }
-body main div .desc {
-  grid-area: desc;
+body main div div .desc {
+  position: relative;
+  top: -10%;
   padding-top: 0%;
   padding-left: 2%;
-}
-body main div .open_form {
-  grid: open_from;
 }
 body main div input {
   display: none;
@@ -124,12 +132,13 @@ body main div input {
 body main div label {
   background-image: url(../../Photo_tours/material-symbols_arrow-forward-ios-sharp.svg);
   background-size: 100%;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  top: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 @media screen and (max-width: 960px) {
@@ -149,6 +158,9 @@ body main div label {
     display: flex;
     flex-direction: column;
   }
+  body main div img {
+    width: 100%;
+  }
   body main div .inf img {
     width: 40px;
   }
@@ -158,6 +170,7 @@ body main div label {
   body main div .desc {
     font-size: 4vw;
     box-sizing: content-box;
+    margin-top: 5vw;
   }
   body main.active {
     margin-top: 50vw;

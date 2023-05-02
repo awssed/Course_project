@@ -1,29 +1,29 @@
+@import '../perem.scss';
 body {
   box-sizing: content-box;
   background-image: url(../../Photo_tours/amazing-waterfall-2K-wallpaper\ 1.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  form.active{
+  @extend %background;
+  form.active {
     display: block;
   }
-  form.close{
+  form.close {
     display: none;
   }
-  form{
-    .off{
+  form {
+    .off {
       display: block;
       background-image: url(../../Photo_tours/radix-icons_cross-1.svg);
       position: relative;
       background-size: 100%;
-        width: 50px;
-        height: 50px;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin-left: auto;
-       margin-top: 0.5vw;
-       margin-right: 0.5vw;
+      width: 50px;
+      height: 50px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-top: 0.5vw;
+      margin-right: 0.5vw;
     }
-    #form_off{
+    #form_off {
       display: none;
     }
     z-index: 1;
@@ -31,27 +31,27 @@ body {
     position: absolute;
     flex-direction: column;
     width: 30%;
-    background: #AEABAB;
-   text-align: center;
-   left: 35%;
-   input[type="text"]{
-    position: relative;
-    margin-top: 3vw;
-    background-color: #fff;
-    border-radius: 50rem;
-    border: 1px solid #fff;
-    padding: 0.5rem 1rem;
-    width: 60%;
-   }
-   input[type="submit"]{
-    position: relative;
-    width: 35%;
-    padding: 2%;
-    border-radius: 20px;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    background: #29A5FF;
-   }
+    background: #aeabab;
+    text-align: center;
+    left: 35%;
+    input[type="text"] {
+      position: relative;
+      margin-top: 3vw;
+      background-color: #fff;
+      border-radius: 50rem;
+      border: 1px solid #fff;
+      padding: 0.5rem 1rem;
+      width: 60%;
+    }
+    input[type="submit"] {
+      position: relative;
+      width: 35%;
+      padding: 2%;
+      border-radius: 20px;
+      margin-top: 2vw;
+      margin-bottom: 2vw;
+      background: #29a5ff;
+    }
   }
   main {
     background: rgba(255, 255, 255, 0.8);
@@ -64,109 +64,112 @@ body {
     padding-top: 1vw;
     padding-bottom: 1vw;
     border-radius: 20px;
-    font-family: "Roboto",sans-serif;
+    font-family: $font;
     overflow: scroll;
     height: 600px;
 
     div {
       position: relative;
       width: 80%;
-      margin-right: auto;
-      margin-left: auto;
+     @extend %margin-auto;
       padding: 2vw;
-        display: grid;
       background: #d9d9d9;
-      grid-template-areas: 
-      "main_photo inform open_form"
-      "main_photo desc open_form";
-      grid-template-columns: 30% 65% 5%;
-      grid-template-rows: 40% 60%;
       margin-top: 1vw;
-     margin-bottom: 1vw;
-        img {
-            grid-area: main_photo;
-          position: relative;
-          width: 100%;
-          margin-top: 2vw;
-          margin-bottom: auto;
-        }
+      margin-bottom: 1vw;
+      display: flex;
+      flex-direction: row;
+      img {
+        grid-area: main_photo;
+        position: relative;
+        width: 40%;
+        margin-top: 2vw;
+        margin-bottom: auto;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
         p {
-          span{
+          span {
             img {
               position: relative;
               width: 2vw;
             }
-              span{
-                position: relative;
-                top: -70%;
-                font-size: 1.4vw;
-              }
+            span {
+              position: relative;
+              top: -70%;
+              font-size: 1.4vw;
+            }
             height: 10px;
             position: relative;
             display: inline-block;
           }
         }
-        .inf{
-            grid-area: inform;
-            padding-left: 2%;
-            margin: 0;
-            height: 15vw;
+        .inf {
+          position: relative;
+          top: -10%;
+          grid-area: inform;
+          padding-left: 2%;
+          margin: 0;
         }
-        .desc{
-            grid-area: desc;
-            padding-top: 0%;
-            padding-left: 2%;
+        .desc {
+          position: relative;
+          top: -10%;
+          padding-top: 0%;
+          padding-left: 2%;
         }
-        .open_form{
-            grid:open_from;
-        }
-        input{
-          display: none;
-        }
-        label{
-         background-image: url(../../Photo_tours/material-symbols_arrow-forward-ios-sharp.svg);
+      }
+      input {
+        display: none;
+      }
+      label {
+        background-image: url(../../Photo_tours/material-symbols_arrow-forward-ios-sharp.svg);
         background-size: 100%;
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
-        top: 100%;
-        }
+        margin-top: auto;
+        margin-bottom: auto;
+      }
     }
   }
 }
-@media screen and (max-width:960px) {
-  body{
-    form{
+@media screen and (max-width: 960px) {
+  body {
+    form {
       width: 70%;
       height: 80%;
       margin-left: auto;
       margin-right: auto;
       left: 15%;
     }
-    main{
+    main {
       overflow: scroll;
-        height: 100vw;
-        width: 85%;
-      div{
+      height: 100vw;
+      width: 85%;
+      div {
+        img {
+          width: 100%;
+        }
         display: flex;
         flex-direction: column;
-      .inf{
-        img{
-          width: 40px;
+        .inf {
+          img {
+            width: 40px;
+          }
+          span {
+            font-size: 5vw;
+          }
         }
-        span{
-          font-size: 5vw;
+        .desc {
+          font-size: 4vw;
+          box-sizing: content-box;
+          margin-top: 5vw;
         }
-      }
-      .desc{
-        font-size:4vw;
-        box-sizing: content-box;
-      }
       }
     }
-    main.active{
+    main.active {
       margin-top: 50vw;
     }
   }

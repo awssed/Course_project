@@ -1,8 +1,6 @@
 body {
   box-sizing: content-box;
   background-image: url(../../Photo_uslugi/canada.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed, fixed;
 }
 body main {
   display: flex;

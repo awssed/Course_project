@@ -1,3 +1,8 @@
+body main div h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   background-image: url(../../Photo_about_us/tropical-forest_4000x2666_hdd3p.png);
   background-repeat: no-repeat;
@@ -82,15 +87,16 @@ body header #mail p {
 }
 body main {
   display: flex;
-  color: white;
   flex-direction: row;
-  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   font-family: "Roboto", sans-serif;
   justify-content: space-between;
   padding-left: 10vw;
   padding-right: 10vw;
   margin-bottom: 5vw;
   flex-wrap: wrap;
+  color: #fefefe;
 }
 body main .break {
   flex-basis: 100%;
@@ -104,8 +110,6 @@ body main div {
 }
 body main div h2 {
   font-weight: 300;
-  margin-left: auto;
-  margin-right: auto;
   width: auto;
 }
 body main div img {
@@ -163,7 +167,7 @@ body footer #phone p {
   margin: 0;
   font-size: 1vw;
   display: inline-block;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   color: #fefefe;
   font-weight: 100;
 }
@@ -178,7 +182,7 @@ body footer #mail p {
   margin: 0;
   font-size: 1vw;
   display: inline-block;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   color: #fefefe;
   font-weight: 100;
 }

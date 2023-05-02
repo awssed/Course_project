@@ -1,7 +1,7 @@
+@import '../perem.scss';
 body {
   background-image: url(../../Photo_contacts/tropical-forest_4000x2666_hdd3p.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  @extend %background;
   background-attachment: fixed,fixed;
   main {
     display: flex;
@@ -20,7 +20,7 @@ body {
         animation-timing-function: ease-in;
         animation-fill-mode: forwards;
         transition: 0.5s ease-out;
-        background-color: rgba(217, 217, 217, 0.7);
+        background-color: $trans_white;
         h2 {
           font-weight: 300;
           margin: 0;
@@ -29,13 +29,13 @@ body {
         padding: 1.5vw;
       }
       .agency:hover {
-        transition: 0.5s ease-out;
+        @include trans(0.5s);
         border-radius: 1.5vw;
         background-color: rgba(217, 217, 217, 1);
       }
       .people {
         div {
-          background-color: rgba(217, 217, 217, 0.7);
+          background-color: $trans_white;
           animation-name: slide;
           animation-duration: 1s;
           animation-timing-function: ease-in;
@@ -56,8 +56,7 @@ body {
             margin-bottom: 0;
           }
           img {
-            width: 50px;
-            left: 5%;
+            width: 1.5vw;
           }
           p {
             display: inline-block;
@@ -66,7 +65,7 @@ body {
           }
         }
         div:hover {
-          transition: 0.5s ease-out;
+          @include trans(0.5s);
           border-radius: 1.5vw;
           background-color: rgba(217, 217, 217, 1);
         }
@@ -80,7 +79,7 @@ body {
       background-color: rgba(217, 217, 217, 1);
       padding: 2vw;
       height: 50%;
-      font-family: "Roboto", sans-serif;
+      font-family: $font;
       font-weight: 100;
       width: 20vw;
       h2{
@@ -112,8 +111,6 @@ body {
     }
     main {
       flex-direction: column;
-      margin-left: auto;
-      margin-right: auto;
       width: 70%;
       .inf{
       .agency {

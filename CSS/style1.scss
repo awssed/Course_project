@@ -1,3 +1,4 @@
+@import 'perem.scss';
 body {
   header {
     display: flex;
@@ -36,6 +37,7 @@ body {
       margin-left: 9vw;
       flex-direction: row;
       margin-top: 1vw;
+      color: #fefefe;
       li {
         box-sizing: content-box;
         display: flex;
@@ -47,7 +49,7 @@ body {
           color: #fefefe;
           text-decoration: none;
           -webkit-text-stroke: 0.5px black;
-          font-family: "Roboto", sans-serif;
+          font-family: $font;
 
         }
       }
@@ -65,7 +67,7 @@ body {
         font-size: 1vw;
         font-weight: 100;
         display: inline-block;
-        font-family: "Roboto";
+        font-family: $font;
         color: #fefefe;
       }
     }
@@ -80,7 +82,7 @@ body {
         font-size: 1vw;
         font-weight: 100;
         display: inline-block;
-        font-family: "Roboto";
+        font-family: $font;
         color: #fefefe;
       }
     }
@@ -124,7 +126,7 @@ body {
         margin: 0;
         font-size: 1vw;
         display: inline-block;
-        font-family: "Roboto";
+        font-family: $font;
         color: #fefefe;
         font-weight: 100;
       }
@@ -140,7 +142,7 @@ body {
         margin: 0;
         font-size: 1vw;
         display: inline-block;
-        font-family: "Roboto";
+        font-family: $font;
         color: #fefefe;
         font-weight: 100;
       }
@@ -158,7 +160,7 @@ body {
         flex-direction: column;
         padding-left: -20px;
         list-style-type: none;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(217, 217, 217, 0.7);
         margin-left: 0;
         margin-top: 15vw;
         height: 50;

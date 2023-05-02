@@ -1,7 +1,11 @@
 body {
-  background-image: url(../../Photo_contacts/tropical-forest_4000x2666_hdd3p.png);
-  background-repeat: no-repeat;
   background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body {
+  background-image: url(../../Photo_contacts/tropical-forest_4000x2666_hdd3p.png);
   background-attachment: fixed, fixed;
 }
 body main {
@@ -59,8 +63,7 @@ body main .inf .people div .spes {
   margin-bottom: 0;
 }
 body main .inf .people div img {
-  width: 50px;
-  left: 5%;
+  width: 1.5vw;
 }
 body main .inf .people div p {
   display: inline-block;
@@ -112,8 +115,6 @@ body main form textarea {
   }
   body main {
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
     width: 70%;
   }
   body main .inf .agency {

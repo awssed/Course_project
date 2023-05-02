@@ -23,6 +23,7 @@ for (var i = 0; i < l; i++) {
   console.log(from);
   main.innerHTML += `<div>
       <img src="${img}" alt="" />
+      <div>
         <p class="inf">
           <span class="from"><img src="Photo_tours/flight_takeoff.svg" alt=""/>${from}</span>
           <span class="to"><img src="Photo_tours/flight_land.svg" alt="" />${to}</span>
@@ -35,24 +36,25 @@ for (var i = 0; i < l; i++) {
         <p class="desc">
           ${desc}
         </p>
+        </div>
         <label for="tour1"></label>
         <input type="button" class="open_form" id="tour1" >
       </div>`;
   console.log(tour);
   main.insertAdjacentHTML("beforeend", tour);
 }
-
-var xhttp = new XMLHttpRequest();
-let submit_but=document.querySelector('#subm');
+let submit_but=document.getElementById('subm');
+const xhttp = new XMLHttpRequest();
+xhttp.open('POST', "XML/people.xml", true);
+xhttp.setRequestHeader('Content-type', 'text/xml');
 submit_but.addEventListener('click',function(){
   const name=document.getElementById('name').value;
   const patronymic=document.getElementById('patronymic').value;
   const surname=document.getElementById('surname').value;
   const mob_number=document.getElementById('mob_number').value;
   const mail=document.getElementById('mail').value;
-  xhttp.open("POST", "http://localhost:5500/XML/people.xml", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send(`name=${name}&patronymic=${patronymic}&surname=${surname}&mob_number=${mob_number}&mail=${mail}`);
+  const xmlData = `<person><name>${name}</name></person>`;
+  xhttp.send(xmlData);
 })
 
 
